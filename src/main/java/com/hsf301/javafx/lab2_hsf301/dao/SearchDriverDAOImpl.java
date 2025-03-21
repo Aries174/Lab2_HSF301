@@ -61,7 +61,7 @@ public class SearchDriverDAOImpl implements SearchDriversDAO{
 
     @Override
     public List<SearchDrivers> findSearchDrives(String email, String name, String status) {
-        StringBuilder queryStr = new StringBuilder("SELECT a FROM Agent a WHERE 1=1");
+        StringBuilder queryStr = new StringBuilder("SELECT a FROM  SearchDrivers  a WHERE 1=1");
         if (email != null && !email.trim().isEmpty()) {
             queryStr.append(" AND a.email LIKE :email");
         }
@@ -71,7 +71,7 @@ public class SearchDriverDAOImpl implements SearchDriversDAO{
         if (status != null && !status.trim().isEmpty()) {
             queryStr.append(" AND a.status LIKE :status"); // Sử dụng LIKE cho status
         }
-        queryStr.append(" ORDER BY a.registerDate ASC, a.agentName ASC");
+        queryStr.append(" ORDER BY a.registerDate ASC, a.Agent_Name ASC");
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
@@ -91,6 +91,7 @@ public class SearchDriverDAOImpl implements SearchDriversDAO{
             return result;
         } catch (Exception e) {
             entityManager.getTransaction().rollback();
+            e.printStackTrace();
             throw new RuntimeException("Lỗi khi tìm kiếm đại lý", e);
         } finally {
             entityManager.close();

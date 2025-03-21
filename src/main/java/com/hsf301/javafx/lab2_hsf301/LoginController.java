@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

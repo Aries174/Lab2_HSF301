@@ -31,25 +31,25 @@
         <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                 <children>
-                    <Label  prefHeight="26.0" prefWidth="86.0" text="Tài Khoản: " />
+                    <Label fx:id="welcomeText1" prefHeight="26.0" prefWidth="86.0" text="Tài Khoản: " />
                     <TextField fx:id="taikhoan" prefHeight="26.0" prefWidth="215.0" />
                 </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                 <children>
-                    <Label  prefHeight="26.0" prefWidth="86.0" text="Trạng thái: " />
+                    <Label fx:id="welcomeText11" prefHeight="26.0" prefWidth="86.0" text="Trạng thái: " />
                <TextField fx:id="trangThai" prefHeight="26.0" prefWidth="215.0" />
                 </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                 <children>
-                    <Label  prefHeight="26.0" prefWidth="86.0" text="Tên Đại Lý: " />
+                    <Label fx:id="welcomeText12" prefHeight="26.0" prefWidth="86.0" text="Tên Đại Lý: " />
                     <TextField fx:id="tenDaiLy" prefHeight="26.0" prefWidth="240.0" />
                 </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <children>
-                    <Button fx:id="search" mnemonicParsing="false" prefHeight="26.0" prefWidth="279.0" text="Tìm Đại lý">
+                    <Button fx:id="search" mnemonicParsing="false" onAction="#buttonSearch" prefHeight="26.0" prefWidth="279.0" text="Tìm Đại lý">
                         <padding>
                             <Insets left="10.0" />
                         </padding>
